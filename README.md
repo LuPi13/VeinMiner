@@ -3,7 +3,7 @@
 
 
 ## 1. Download
-- 오른쪽 Release 항목을 눌러 원하는 버전을 다운로드 하거나, [여기(아직 안만듬)](https://github.com/LuPi13/VeinMiner/releases/download/1.0/VeinMiner-1.0.jar)를 눌러 최신 버전을 다운 받을 수 있게 만들겠읍니다
+- 오른쪽 Release 항목을 눌러 원하는 버전을 다운로드 하거나, [여기](https://github.com/LuPi13/VeinMiner/releases/download/1.0/VeinMiner-1.0.jar)를 눌러 최신 버전을 다운 받을 수 있습니다.
 
 
 ## 2. Features
