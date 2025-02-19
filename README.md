@@ -21,5 +21,9 @@
   + Blacklist: VeinMining이 작동하지 않을 블럭을 설정합니다.
   + Similars: BreakSimilars가 true일 때, 어떤 블럭을 유사한 블럭으로 취급할지 설정합니다.
 
-## 3. Changed log
+
+## 3. Commands
+- `/veinminer reload`: config.yml을 수정 후, 서버를 재시작하지 않고 설정을 적용합니다.
+
+## 4. Changed log
 - 1.0: VeinMining 기본 알고리즘 제작 (FIRST COMMIT)
