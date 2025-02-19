@@ -1,0 +1,10 @@
+name: VeinMiner
+version: '${project.version}'
+main: com.github.lupi13.veinminer.VeinMiner
+api-version: '1.20'
+author: Lupi13
+description: 'VeinMiner plugin for PaperMC'
+commands:
+  veinminer:
+    description: 'VeinMiner command'
+    usage: '/veinminer'
