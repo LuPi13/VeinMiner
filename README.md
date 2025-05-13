@@ -3,7 +3,7 @@
 
 
 ## 1. Download
-- 오른쪽 Release 항목을 눌러 원하는 버전을 다운로드 하거나, [여기(아직 안만듬)](https://github.com/LuPi13/LIMPI)를 눌러 최신 버전을 다운 받을 수 있게 만들겠읍니다
+- 오른쪽 Release 항목을 눌러 원하는 버전을 다운로드 하거나, [여기](https://github.com/LuPi13/VeinMiner/releases/download/1.1/VeinMiner-1.1.jar)를 눌러 최신 버전을 다운 받을 수 있습니다.
 
 
 ## 2. Features
@@ -21,5 +21,9 @@
   + Blacklist: VeinMining이 작동하지 않을 블럭을 설정합니다.
   + Similars: BreakSimilars가 true일 때, 어떤 블럭을 유사한 블럭으로 취급할지 설정합니다.
 
-## 3. Changed log
+
+## 3. Commands
+- `/veinminer reload`: config.yml을 수정 후, 서버를 재시작하지 않고 설정을 적용합니다.
+
+## 4. Changed log
 - 1.0: VeinMining 기본 알고리즘 제작 (FIRST COMMIT)

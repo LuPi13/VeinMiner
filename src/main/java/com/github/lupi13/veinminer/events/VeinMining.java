@@ -1,13 +1,11 @@
 package com.github.lupi13.veinminer.events;
 
 import com.github.lupi13.veinminer.VeinMiner;
-import org.bukkit.GameMode;
-import org.bukkit.Material;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.ExperienceOrb;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -117,8 +115,24 @@ public class VeinMining implements Listener {
                                 block1.setType(Material.AIR);
                             }
                             else {
-                                player.getWorld().spawn(block1.getLocation().add(0.5, 0.5, 0.5), ExperienceOrb.class, experienceOrb -> experienceOrb.setExperience(event.getExpToDrop()));
+                                if (event.getExpToDrop() > 1) {
+                                    if (plugin.getConfig().getBoolean("TeleportDrops")) {
+                                        player.getWorld().spawn(player.getLocation(), ExperienceOrb.class, experienceOrb -> experienceOrb.setExperience(event.getExpToDrop()));
+                                    }
+                                    else {
+                                        player.getWorld().spawn(block1.getLocation().add(0.5, 0.5, 0.5), ExperienceOrb.class, experienceOrb -> experienceOrb.setExperience(event.getExpToDrop()));
+                                    }
+                                }
                                 block1.breakNaturally(item);
+                                if (plugin.getConfig().getBoolean("TeleportDrops")) {
+                                    Location loc = block1.getLocation();
+                                    Item item = ((Item) Objects.requireNonNull(loc.getWorld()).getNearbyEntities(loc.add(0.5,0.5,0.5), 1, 1, 1, entity -> entity instanceof Item).stream().findFirst().orElse(null));
+                                    if (item == null) {
+                                        break;
+                                    }
+                                    item.teleport(player.getLocation());
+                                    item.setPickupDelay(0);
+                                }
                                 if (damageable != null && Math.random() <= chance) {
                                     damageable.setDamage(damageable.getDamage() + 1);
                                     item.setItemMeta(damageable);
@@ -157,6 +171,7 @@ public class VeinMining implements Listener {
                     break;
                 }
             }
+            similar.add(material.toString());
         }
         else {
             similar.add(material.toString());

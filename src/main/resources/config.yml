@@ -13,7 +13,7 @@ Ticking: 1
 # 이 수치를 너무 크게 할 경우 서버에 과도한 계산 처리 렉을 유발할 수 있음
 MaxChain: 256
 # =TeleportDrops= (default: false)
-# 블럭이 파괴되고 떨어지는 아이템을 파괴자에게 즉시 전달(미구현 기능)
+# 블럭이 파괴되고 떨어지는 아이템을 파괴자에게 즉시 전달
 TeleportDrops: false
 # =BreakSimilars= (default: true)
 # 유사한 블럭(예: 철 광석-심층암 철 광석)을 함께 파괴, 유사한 블럭 설정은 밑에서 설정 가능
@@ -56,7 +56,7 @@ Whitelist:
   - NETHER_GOLD_ORE
   - ANCIENT_DEBRIS
 # =Blacklist=
-# OverrideBlacklist가 true일 때, 해당 블럭들은 Whitelist에 있더라도 연쇄파괴되지 못함
+# OverrideBlacklist가 true일 때, 해당 블럭들은 Whitelist나 Similars에 있더라도 연쇄파괴되지 못함
 Blacklist:
   - GRASS_BLOCK
   - DIRT
