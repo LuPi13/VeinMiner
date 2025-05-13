@@ -12,7 +12,7 @@
   + PermissionRequired: VeinMining의 접근성을 제어합니다.
   + Ticking: 1틱 당 파괴되는 블럭의 개수입니다.
   + MaxChain: 한 번의 VeinMining이 파괴하는 최대 블럭의 개수입니다.
-  + TeleportDrops: VeinMining으로 파괴된 블럭의 아이템이 유저에게 텔레포트됩니다.(미구현)
+  + TeleportDrops: VeinMining으로 파괴된 블럭의 아이템이 유저에게 텔레포트됩니다.
   + BreakSimilars: 주변의 유사한 블럭도 파괴합니다.
   + BreakDiagonal: 모서리나 꼭짓점만 닿은 블럭도 파괴합니다.
   + OverrideBlacklist: Blacklist에 등록된 블럭을 연쇄파괴하지 못하게 설정합니다.
